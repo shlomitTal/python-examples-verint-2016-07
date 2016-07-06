@@ -1,8 +1,10 @@
-"""
-Write a program that reads lines from the user
-until an empty line is inserted.
-After the user typed in an empty line,
-print all previously inserted lines in reverse
-order (from last to first)
-"""
+#commited by Shlomit
+
+line =raw_input()
+st=""
+while len(line) > 0:
+    st = line + "\n" + st
+    line =raw_input()
+
+print "the opposite sting is:\n", st
 
