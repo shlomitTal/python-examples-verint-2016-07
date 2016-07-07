@@ -1,6 +1,6 @@
 #Commited by Shlomit
 import sys
-if(len(sys.argv)) < 1:
+if(len(sys.argv)) < 2:
     print "error - you didn't add any arguments!"
     sys.exit
 
