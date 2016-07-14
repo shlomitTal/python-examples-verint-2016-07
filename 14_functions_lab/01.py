@@ -1,7 +1,14 @@
-"""
-Write 2 functions:
-    mysum - returns the sum of its input arguments
-    mymul - returns the multiplication of its input arguments
-    Ignore non-numeric arguments
-"""
+#commited by Shlomit
+import operator
 
+def mysum(*mylist):
+  return  sum([i for i in mylist if type(i)== int])
+  
+def mymul(*mylist):
+   return reduce(operator.mul, [i for i in mylist if type(i)== int])
+
+#sum = mysum(5,7,"jj", 5, "", 10)
+#print "sum is: %d" % sum
+
+#sum = mymul(5,7,"jj", 5, "", 10)
+#print "mymul is: %d" % sum
