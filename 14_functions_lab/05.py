@@ -1,10 +1,13 @@
-"""
-Write a function groupby that takes a list
-and a function and returns a dictionary
-keyd by the return value of the function on the list items
+#commited by Shlomit
 
-For example:
-    groupby(lambda s: s[0], ['foo', 'fi', 'hello', 'hi'])
-    returns: { 'f': ['foo','fi'], 'h': ['hello', 'hi'] }
-"""
+from collections import defaultdict
 
+def groupby(func, *mylist):
+    dict = defaultdict(list)
+    for item in mylist:
+        dict[func(item)].append(item)
+    return dict
+
+
+#a = groupby(lambda(s): s[0], 'helo', 'hi', 'help', 'bye', 'here')
+#print a.items()
