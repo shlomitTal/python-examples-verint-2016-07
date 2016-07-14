@@ -1,5 +1,16 @@
-"""
-Write a function that calculates the sum
-of the 10th digit from all arguments passed to it
-"""
+#commited by Shlomit
 
+import numbers
+def calc(*args):
+    sum = 0;
+    for i in args:
+        if  not isinstance(i, numbers.Number):
+            continue
+        sum += (abs(i)/ 10) % 10
+    return sum
+
+
+#a = calc(-140,8, 220, 1120, -98,-100)
+#print a
+          
+        
