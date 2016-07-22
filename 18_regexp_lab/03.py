@@ -1,15 +1,10 @@
-"""
-Write a python program that takes a CSV file
-reads it line by line and prints each line
-with first and second columns reversed.
+#comited by Shlomit
+import re
 
-Sample input:
-    Shana,Sargent,shanasargent@isoswitch.com
-    Witt,Hampton,witthampton@zaphire.com
-    Morgan,Grant,morgangrant@lotron.com
-
-Sample output:
-    Sargent,Shana,shanasargent@isoswitch.com
-    Hampton,Witt,witthampton@zaphire.com
-    Grant,Morgan,morgangrant@lotron.com
-"""
+def changePlace(text):
+   regex= "(^[^,]+),([^,]),(.*)"
+   res = re.search(regex,text)
+   if res is not None:
+       print res.group(2)+ "," + res.group(1) + "," + res.group(3)
+ 
+#changePlace("s,b,y,4")
