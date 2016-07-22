@@ -1,12 +1,14 @@
-"""
-Write a program that reads data
-from property files.
-Each line in the file can either be:
-    An empty line
-    A comment line (Start with #)
-    A property line (of the form key = value)
+#commited by shlomit
+import sys
+import re
+if len(sys.argv) < 3: 
+    sys.exit("error - you didn't add any arguments!")
 
-Write a program that takes a property file name and key
-as command line arguments and prints the requested value
-"""
+regex= sys.argv[2] + '[ ]*=[ ]*(.*)'
 
+file = sys.argv[1]
+with open(file, "r") as f:
+    for line in f:
+        res = re.search(regex,line)
+        if res is not None:
+            print res.group(1)
