@@ -1,7 +1,11 @@
-"""
-Write a program that takes a file name
-and prints line count for the file
-
-Alert the user politely if there was any problem opening the file
-"""
-
+import sys
+if len(sys.argv) < 2 :
+    raise BaseException("dont enter a file as argument!")
+try:
+    count = 0
+    with open(sys.argv[1], "r") as f:
+        for line in f:
+            count +=1
+    print count
+except Exception as e:
+    print "sory, file %s, not exist"% sys.argv[1]
